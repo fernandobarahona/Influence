@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://owimf6xgaagr"]
+
+[ext_resource type="Script" path="res://screens/game_objects/game_object/game_object.gd" id="1_kksjb"]
+[ext_resource type="Texture2D" uid="uid://b66d3q0x6i6kw" path="res://placeholder_citizen.png" id="2_47ift"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_pv27c"]
+a = Vector2(0, -10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6sfba"]
+a = Vector2(0, -10)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lylxm"]
+a = Vector2(-10, 0)
+b = Vector2(10, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2ts5u"]
+a = Vector2(-10, 0)
+b = Vector2(10, 0)
+
+[node name="GameObject" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kksjb")
+
+[node name="Textures" type="Node2D" parent="."]
+
+[node name="PlaceholderCitizen" type="Sprite2D" parent="Textures"]
+position = Vector2(0, -2)
+scale = Vector2(0.722222, 0.68254)
+texture = ExtResource("2_47ift")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -4)
+
+[node name="WestCollShape" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-25, 0)
+shape = SubResource("SegmentShape2D_pv27c")
+
+[node name="EastCollShape2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(25, 0)
+shape = SubResource("SegmentShape2D_6sfba")
+
+[node name="NortCollShape3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -30)
+shape = SubResource("SegmentShape2D_lylxm")
+
+[node name="SouthCollShape4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 31)
+shape = SubResource("SegmentShape2D_2ts5u")
