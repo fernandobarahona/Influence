@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh8h6prp5df0f"]
+[gd_scene load_steps=5 format=3 uid="uid://bh8h6prp5df0f"]
 
 [ext_resource type="Script" path="res://screens/game_screen/game_grid/game_grid.gd" id="1_jchi1"]
 [ext_resource type="PackedScene" uid="uid://c781xg2bjl0m3" path="res://screens/game_screen/game_grid/cell/cell.tscn" id="2_lwl25"]
 [ext_resource type="Script" path="res://screens/game_screen/game_grid/cell/cell.gd" id="3_uebex"]
+[ext_resource type="PackedScene" uid="uid://owimf6xgaagr" path="res://screens/game_objects/game_object/game_object.tscn" id="4_t0jnn"]
 
 [node name="GameGrid" type="GridContainer"]
 offset_right = 50.0
@@ -12,26 +13,30 @@ columns = 2
 script = ExtResource("1_jchi1")
 cell_size = Vector2(30, 50)
 
-[node name="@Button@19011" type="Button" parent="." instance=ExtResource("2_lwl25")]
+[node name="@Button@19935" type="Button" parent="." instance=ExtResource("2_lwl25")]
 custom_minimum_size = Vector2(30, 50)
 layout_mode = 2
 focus_mode = 0
 script = ExtResource("3_uebex")
+game_object_packed_scene = ExtResource("4_t0jnn")
 
-[node name="@Button@19012" type="Button" parent="." instance=ExtResource("2_lwl25")]
+[node name="@Button@19936" type="Button" parent="." instance=ExtResource("2_lwl25")]
 custom_minimum_size = Vector2(30, 50)
 layout_mode = 2
 focus_mode = 0
 script = ExtResource("3_uebex")
+game_object_packed_scene = ExtResource("4_t0jnn")
 
-[node name="@Button@19013" type="Button" parent="." instance=ExtResource("2_lwl25")]
+[node name="@Button@19937" type="Button" parent="." instance=ExtResource("2_lwl25")]
 custom_minimum_size = Vector2(30, 50)
 layout_mode = 2
 focus_mode = 0
 script = ExtResource("3_uebex")
+game_object_packed_scene = ExtResource("4_t0jnn")
 
-[node name="@Button@19014" type="Button" parent="." instance=ExtResource("2_lwl25")]
+[node name="@Button@19938" type="Button" parent="." instance=ExtResource("2_lwl25")]
 custom_minimum_size = Vector2(30, 50)
 layout_mode = 2
 focus_mode = 0
 script = ExtResource("3_uebex")
+game_object_packed_scene = ExtResource("4_t0jnn")
